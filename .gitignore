@@ -1,2 +1,5 @@
 proj1_env
+list
 djangobasic1/db.sqlite3
+*.pyc
+*__pycache__
