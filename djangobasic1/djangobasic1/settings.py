@@ -47,7 +47,7 @@ DEBUG = os.environ.get('DEBUG')
 print(SECRET_KEY)
 print(DEBUG)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
