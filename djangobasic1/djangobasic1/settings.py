@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import environ
 import os
+import dj_database_url
 
 env = environ.Env(
     # set casting, default value
@@ -41,7 +42,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
-# DEBUG = True
+# Mode
+MODE = os.environ.get('MODE') == 'DEV'
+# DB Connection Setup 
+DB_CONNECTION = os.environ.get('DB_CONNECTION','')
 
 
 print(SECRET_KEY)
@@ -97,12 +101,17 @@ WSGI_APPLICATION = 'djangobasic1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if MODE:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+else:
+    DATABASES = {
+        "default": dj_database_url.parse(DB_CONNECTION)
+    }
 
 
 # Password validation
