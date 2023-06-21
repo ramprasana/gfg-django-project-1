@@ -95,7 +95,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'djangobasic1.wsgi.application'
+WSGI_APPLICATION = 'djangobasic1.djangobasic1.wsgi.application'
 
 
 # Database
