@@ -63,8 +63,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'djangobasic1.persons_app',
-    'djangobasic1.todo_app'
+    'persons_app',
+    'todo_app'
 ]
 
 MIDDLEWARE = [
@@ -77,7 +77,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'djangobasic1.djangobasic1.urls'
+ROOT_URLCONF = 'djangobasic1.urls'
 
 TEMPLATES = [
     {
@@ -95,7 +95,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'djangobasic1.djangobasic1.wsgi.application'
+WSGI_APPLICATION = 'djangobasic1.wsgi.application'
 
 
 # Database
