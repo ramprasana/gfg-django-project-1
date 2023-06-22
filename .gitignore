@@ -1,6 +1,7 @@
 proj1_env-tmp
 proj1_env
 list
-djangobasic1/db.sqlite3
+db.sqlite3
 *.pyc
 *__pycache__
+djangobasic1/.env
