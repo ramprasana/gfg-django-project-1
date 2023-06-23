@@ -23,9 +23,9 @@ env = environ.Env(
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 # Read the env file
-ENV_FILE_PATH = os.path.join(BASE_DIR, '.env')
+ENV_FILE_PATH = os.path.join(BASE_DIR, 'djangobasic1/.env')
 environ.Env.read_env(ENV_FILE_PATH)
-
+print("Environment - {}".format(ENV_FILE_PATH))
 
 READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
 if READ_DOT_ENV_FILE:
@@ -47,8 +47,8 @@ MODE = os.environ.get('MODE') == 'DEV'
 # DB Connection Setup 
 DB_CONNECTION = os.environ.get('DB_CONNECTION','')
 
-
-print(SECRET_KEY)
+print("**********************")
+print("Secret Ket - {}".format(SECRET_KEY))
 print(DEBUG)
 
 ALLOWED_HOSTS = ['*']
